@@ -10,7 +10,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/registrations")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://eventhub-portal.netlify.app"
+})
 public class RegistrationController {
 
     private final RegistrationService registrationService;
